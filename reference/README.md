@@ -1,0 +1,1 @@
+lan8742 BPS and its calling parts from STM32 H7 firmware v1.9.0
