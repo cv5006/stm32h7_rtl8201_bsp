@@ -108,5 +108,6 @@
 #define RTL8201_P7_LED ((uint16_t)19U)
 #define RTL8201_P7_LED_MASK             ((uint16_t)0x0030U)
 #define RTL8201_P7_LED_ACK_ALL_LINK_100 ((uint16_t)0x0000U)
+#define RTL8201_P7_LED_ACT_LINK_10_100  ((uint16_t)0x0030U)
 
 #endif //RTL8201_REGMAP_H
