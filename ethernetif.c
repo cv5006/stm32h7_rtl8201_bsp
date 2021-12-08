@@ -52,8 +52,15 @@ rtl8201f_IOCtx_t  RTL8201F_IOCtx = {ETH_PHY_IO_Init,
 
 
 /* USER CODE BEGIN low_level_init Code 1 for User BSP */
+  HAL_GPIO_WritePin(GPIOG, GPIO_PIN_4|GPIO_PIN_5|PHY_RST_Pin, GPIO_PIN_SET);
+  osDelay(100);
+  HAL_GPIO_WritePin(GPIOG, GPIO_PIN_4|GPIO_PIN_5|PHY_RST_Pin, GPIO_PIN_RESET);
+  osDelay(100);
+
   RTL8201F_RegisterBusIO(&RTL8201F, &RTL8201F_IOCtx); // Set PHY IO functions
-  RTL8201F_Init(&RTL8201F); // Initialize the RTL8201F ETH PHY
+  if(RTL8201F_Init(&RTL8201F) != RTL8201F_STATUS_OK){ // Initialize the RTL8201F ETH PHY
+    Error_Handler();
+  }
 /* USER CODE END low_level_init Code 1 for User BSP */
 
 
