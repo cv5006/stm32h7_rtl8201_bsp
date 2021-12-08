@@ -2,6 +2,7 @@
 #ifdef RTL8201_H
 
 #include <stdint.h>
+#include "rtl8201_regmap.h"
 
 /*
   ___ _____ _    ___ ___ __  _   ___ _____ _ _____ _   _ ___ 
@@ -23,6 +24,17 @@
 #define  RTL8201_STATUS_10MBITS_HALFDUPLEX    ((int32_t) 5)
 #define  RTL8201_STATUS_AUTONEGO_NOTDONE      ((int32_t) 6)
 
+
+/*
+  ___                         _              
+ | _ \__ _ _ _ __ _ _ __  ___| |_ ___ _ _ ___
+ |  _/ _` | '_/ _` | '  \/ -_)  _/ -_) '_(_-<
+ |_| \__,_|_| \__,_|_|_|_\___|\__\___|_| /__/
+                                              */
+#define RTL8201_SW_RESET_TIMEOUT  ((uint32_t)500U)
+#define RTL8201_REG_SETTING_DELAY ((uint32_t)200U)
+#define RTL8201_INIT_TIMEOUT      ((uint32_t)2000U)
+#define RTL8201_PHY_ADDR          ((uint32_t)0b00U)
 
 /*
    ___  _     _        _     __       ___ ___    ___             ___ _               _   

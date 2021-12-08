@@ -27,12 +27,12 @@
 
 /* PHY Identifier Register */
 #define RTL8201_PHYI1R ((uint16_t)02U)
-#define RTL8201_PHYI1R_OUI_3_18     ((uint16_t)0xFFFFU)
+#define RTL8201_PHYI1R_OUI_HIGH     ((uint16_t)0x001CU)
 
 #define RTL8201_PHYI2R ((uint16_t)03U)
-#define RTL8201_PHYI2R_OUI_19_24    ((uint16_t)0xFC00U)
-#define RTL8201_PHYI2R_MODEL_NBR    ((uint16_t)0x03F0U)
-#define RTL8201_PHYI2R_REVISION_NBR ((uint16_t)0x000FU)
+#define RTL8201_PHYI2R_OUI_LOW    ((uint16_t)0x3200U)
+#define RTL8201_PHYI2R_MODEL_NBR    ((uint16_t)0x0010U)
+#define RTL8201_PHYI2R_REVISION_NBR ((uint16_t)0x0003U)
 
 /* Auto-negotiation Register */
 #define RTL8201_ANAR ((uint16_t)04U)
